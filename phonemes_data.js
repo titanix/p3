@@ -105,13 +105,7 @@ var vowels = [
         // not in American English ; albeit /ow/ exists
         'sound' : ''
     },
-    {
-        'name' : '',
-        'symbol' : '',
-        'french' : '<strong></strong>',
-        'english' : '<strong></strong>',
-        'sound' : ''
-    },
+
     /*
     {
         'name' : '',

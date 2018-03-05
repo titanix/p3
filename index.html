@@ -1,12 +1,18 @@
 <html>
     <head>
+    <meta charset="UTF-8">
     <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> 
                 from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by 
                 <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
             -->
     <link rel="stylesheet" type="text/css" href="phonemes.css">
+    <link rel="stylesheet" type="text/css" href="select-bar.css">
+    
     <script src="phonemes_data.js"></script>
     <script src="phonemes_code.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
     <script>
     
     // public static String format(string[] format)
@@ -28,13 +34,18 @@ window.onload = function init()
 </head>
 
 <body>
-    <select id="preset_language" onchange="selection_changed_handler()">
-        <option value="all">All</option>
-        <option value="english">English (USA)</option>
-        <option value="french">French (France)</option>
-    </select>
+    <div style="margin-bottom:40px;">
+        <select id="preset_language"
+            onchange="selection_changed_handler()">
+            <option value="all">All</option>
+            <option value="english">English (USA)</option>
+            <option value="french">French (France)</option>
+        </select>
+    </div>
     <div id="vowel_panel" class="phoneme_group_grid">
     </div>
 </body>
 
+
+<script src="select-bar.js"></script>
 </html>
