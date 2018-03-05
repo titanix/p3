@@ -5,226 +5,35 @@
                 <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
             -->
     <link rel="stylesheet" type="text/css" href="phonemes.css">
+    <script src="phonemes_data.js"></script>
+    <script src="phonemes_code.js"></script>
     <script>
-    var vowels = [
-        {
-            'close_front_unrounded_vowel' : {
-                'symbol' : 'i',
-                'french' : 'v<strong>i</strong>e',
-                'english' : 'b<strong>ee</strong>t',
-                'sound' : ''
-            }
-        },
-        {
-            'close_front_rounded_vowel' : {
-                'symbol' : 'y',
-                'french' : 'ch<strong>u</strong>te',
-                'english' : 'f<strong>ew</strong>',
-                'sound' : ''
-            }
-        }
-    ]
+    
+    // public static String format(string[] format)
+    if (!String.format) {
+        String.format = function(format) {
+                var args = Array.prototype.slice.call(arguments, 1);
+                return format.replace(/{(\d+)}/g, function(match, number) { 
+                return typeof args[number] != 'undefined' ? args[number] : match;
+            });
+        };
+    }
+
+window.onload = function init()
+{
+    display_phonemes_with_selected_language('all');
+}
+
     </script>
 </head>
 
 <body>
-    <div class="phoneme_group_grid">
-        <div class="phoneme_grid pos_1_1">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">i</div>
-            <div class="phoneme_example">b<strong>ee</strong>t</div>
-        </div>
-        <div class="phoneme_grid pos_1_2">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">y</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid pos_1_3">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɨ</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid pos_1_4">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ʉ</div>
-            <div class="phoneme_example">b<strong>oo</strong>t</div>
-        </div>
-        <div class="phoneme_grid pos_1_5">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɯ</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid pos_1_6">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">u</div>
-            <div class="phoneme_example">b<strong>oo</strong>t</div>
-        </div>
-        <div class="phoneme_grid pos_1_7">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɪ</div>
-            <div class="phoneme_example">b<strong>i</strong>t</div>
-        </div>
-        <div class="phoneme_grid pos_1_8">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ʏ</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ʊ</div>
-            <div class="phoneme_example">h<strong>oo</strong>k</div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">e</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ø</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɘ</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɵ</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɤ</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">o</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ə</div>
-            <div class="phoneme_example">daught<strong>e</strong>r</div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɛ</div>
-            <div class="phoneme_example">b<strong>e</strong>d</div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">œ</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɜ</div>
-            <div class="phoneme_example">f<strong>u</strong>r</div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɞ</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ʌ</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɔ</div>
-            <div class="phoneme_example">b<strong>a</strong>ll</div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">æ</div>
-            <div class="phoneme_example">f<strong>a</strong>t</div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɐ</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">a</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɶ</div>
-            <div class="phoneme_example"></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɑ</div>
-            <div class="phoneme_example">sp<strong>a</strong></div>
-        </div>
-        <div class="phoneme_grid">
-            <div class="phoneme_sound">
-                <img class="speaker" src="speaker.svg">
-            </div>
-            <div class="phoneme_symbol">ɒ</div>
-            <div class="phoneme_example">h<strong>o</strong>t</div>
-        </div>
+    <select id="preset_language" onchange="selection_changed_handler()">
+        <option value="all">All</option>
+        <option value="english">English (USA)</option>
+        <option value="french">French (France)</option>
+    </select>
+    <div id="vowel_panel" class="phoneme_group_grid">
     </div>
 </body>
 
