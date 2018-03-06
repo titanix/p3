@@ -34,16 +34,23 @@ window.onload = function init()
 </head>
 
 <body>
+    <h1>Title</h1>
     <div style="margin-bottom:40px;">
+        <h2>Start from a natural language</h2>
         <select id="preset_language"
             onchange="selection_changed_handler()">
             <option value="all">All</option>
             <option value="english">English (USA)</option>
             <option value="french">French (France)</option>
+            <option value="czech">Czech</option>
         </select>
     </div>
+    <h2>Simple Vowels</h2>
+    <p>Une voyelle est un son du langage dont la production est caractérisée par le libre passage de l'air
+        dans la cavité buccale ou les fosses nasales. <a href="#">More...<a></p>
     <div id="vowel_panel" class="phoneme_group_grid">
     </div>
+    <h2>Diphthong</h2>
 </body>
 
 
