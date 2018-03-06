@@ -12,31 +12,6 @@ h1 {
   font-weight: normal;
   text-transform: uppercase;
 }
-h1 span {
-  font-size: 13px;
-  display: block;
-  padding-left: 4px;
-}
-
-p {
-  margin-top: 200px;
-}
-p a {
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  color: #fff;
-  padding: 5px 10px;
-  margin: 0 5px;
-  background-color: #dbdbdb;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-}
-p a:hover {
-  background-color: lightgray;
-}
 
 .select-hidden {
   display: none;
