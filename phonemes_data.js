@@ -4,6 +4,7 @@ var vowels = [
         'symbol' : 'i',
         'french' : 'v<strong>i</strong>e',
         'english' : 'b<strong>ee</strong>t',
+        'czech' : 't<strong>y</strong>',
         'sound' : ''
         
     },
@@ -40,6 +41,7 @@ var vowels = [
         'symbol' : 'u',
         'french' : 'f<strong>ou</strong>',
         'english' : 'b<strong>oo</strong>t',
+        'czech' : 'm<strong>u</strong>ž',
         'sound' : ''
     },
     {
@@ -68,6 +70,7 @@ var vowels = [
         'symbol' : 'e',
         'french' : 'beaut<strong>é</strong>',
         'english' : 'pl<strong>ay</strong>',
+        'czech' : 'kd<strong>e</strong>',
         'sound' : ''
     },
     {
@@ -102,10 +105,102 @@ var vowels = [
         'name' : 'close-mid_back_rounded_vowel',
         'symbol' : 'o',
         'french' : 'rés<strong>eau</strong>',
+        'czech' : 'piv<strong>o</strong>',
         // not in American English ; albeit /ow/ exists
         'sound' : ''
     },
-
+    {
+        'name' : 'mid_central_vowel',
+        'symbol' : 'ə',
+        'french' : 'qu<strong>e</strong>',
+        // not in American English
+        'sound' : ''
+    },
+    {
+        'name' : 'open-mid_front_unrounded_vowel',
+        'symbol' : 'ɛ',
+        'french' : 'c<strong>è</strong>pe',
+        'english' : 'b<strong>e</strong>d',
+        'sound' : ''
+    },
+    {
+        'name' : 'open-mid_front_rounded_vowel',
+        'symbol' : 'œ',
+        'french' : 'j<strong>eu</strong>ne',
+        // not in American English
+        'sound' : ''
+    },
+    {
+        'name' : 'open-mid_central_unrounded_vowel',
+        'symbol' : 'ɜ',
+        // not in French
+        // not in American English
+        'sound' : ''
+    },
+    {
+        'name' : 'open-mid_central_rounded_vowel',
+        'symbol' : 'ɞ',
+        // not in French
+        // not in American English
+        'sound' : ''
+    },
+    {
+        'name' : 'open-mid_back_unrounded_vowel',
+        'symbol' : 'ʌ',
+        // not in French
+        'english' : 'g<strong>u</strong>t',
+        'sound' : ''
+    },
+    {
+        'name' : 'open-mid_back_rounded_vowel',
+        'symbol' : 'ɔ',
+        'french' : 's<strong>o</strong>rt',
+        'english' : 'th<strong>ough</strong>t',
+        'sound' : ''
+    },
+    {
+        'name' : 'near-open_front_unrounded_vowel',
+        'symbol' : 'æ',
+        // not in French
+        'english' : 'c<strong>a</strong>t',
+        'sound' : ''
+    },
+    {
+        'name' : 'near-open_central_vowel',
+        'symbol' : 'ɐ',
+        // not in French
+        // not in American English
+        'sound' : ''
+    },
+    {
+        'name' : 'open_front_unrounded_vowel',
+        'symbol' : 'a',
+        'french' : 'l<strong>a</strong>',
+        'english' : 'h<strong>a</strong>t',
+        'czech' : '<strong>a</strong>no',
+        'sound' : ''
+    },
+    {
+        'name' : 'open_front_rounded_vowel',
+        'symbol' : 'ɶ',
+        // not in French
+        // not in American English
+        'sound' : ''
+    },
+    {
+        'name' : 'open_back_unrounded_vowel',
+        'symbol' : 'ɑ',
+        'french' : 'p<strong>â</strong>te',
+        'english' : 'f<strong>a</strong>ther',
+        'sound' : ''
+    },
+    {
+        'name' : 'open_back_rounded_vowel',
+        'symbol' : 'ɒ',
+        // not in French
+        // not in American English; British English: 'english' : 'l<strong>o</strong>t',
+        'sound' : ''
+    },
     /*
     {
         'name' : '',
