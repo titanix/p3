@@ -21,9 +21,9 @@ function generate_phoneme_display(phoneme, language, additional_class)
 function filter_phoneme_array_for_lang(phoneme_array, language)
 {
     var result = Array();
-    for(var p of phoneme_array)
+    for(let p of phoneme_array)
     {
-        if(!(p[language] === undefined))
+        if(p.hasOwnProperty(language))
         {
             result.push(p);
         }
@@ -52,7 +52,7 @@ function display_phonemes(phoneme_array, lang)
     var panel = document.getElementById('vowel_panel');
     var i = 0;
 
-    for(var p of phoneme_array)
+    for(let p of phoneme_array)
     {
         var css_class = i < 8 ? 'pos_1_' + (i++ + 1) : '';
         panel.innerHTML += generate_phoneme_display(p, lang, css_class);

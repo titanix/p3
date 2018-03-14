@@ -238,4 +238,29 @@ var vowels = [
 		'all' : ''
     },
     */
+   // French only
+   {
+        'name' : 'nasal_open_back_unrounded_vowel',
+        'symbol' : 'ɑ̃',
+        'french' : 'p<strong>an</strong>da',
+        'sound' : ''
+    },
+    {
+        'name' : 'nasal_open-mid_back_rounded_vowel',
+        'symbol' : 'ɔ̃',
+        'french' : 'b<strong>on</strong>',
+        'sound' : ''
+    },
+    {
+        'name' : 'nasal_open-mid_front_unrounded_vowel',
+        'symbol' : 'ɛ̃',
+        'french' : 'v<strong>in</strong>',
+        'sound' : ''
+    },
+    {
+        'name' : 'nasal_open-mid_front_rounded_vowel',
+        'symbol' : 'œ̃',
+        'french' : 'br<strong>un</strong>',
+        'sound' : '',
+    },
 ];
