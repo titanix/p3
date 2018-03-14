@@ -1,0 +1,104 @@
+<template id="phoneme">
+    <style>
+        .phoneme_grid {
+            display: grid;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            background-color: #E0E0E0;
+            /* rgb(86, 183, 89);*/
+            height: 120px;
+            width: 120px;
+            grid-auto-columns: 40px;
+            grid-auto-rows: 40px;
+        }
+
+        .phoneme_grid:hover {
+            background-color: #BABABA;
+        }
+
+        .phoneme_grid > div {
+            /*border : 1px solid white;*/
+        }
+
+        .phoneme_sound {
+            grid-row: 1;
+            grid-column: 3;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .phoneme_symbol {
+            grid-row: 2;
+            grid-column: 2;
+            justify-self: center;
+            align-self: center;
+
+            font-family: Lato, Arial;
+            font-size: 3em;
+        }
+
+        .phoneme_example {
+            grid-row: 3;
+            grid-column: 2;
+            justify-self: center;
+            align-self: center;
+
+            font-weight: 200;
+            font-family: DejaVuSansLight;
+            opacity: 0.7;
+        }
+
+        .phoneme_example > strong
+        {
+            font-family: DejaVuSans;
+        }
+
+        .speaker {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+
+    <div class="phoneme_grid">
+        <div class="phoneme_sound">
+            <img class="speaker" src="speaker.svg">
+        </div>
+        <div class="phoneme_symbol">{0}</div>
+        <div class="phoneme_example">{1}</div>
+    </div>
+
+</template>
+<script>
+    var currentDoc = document.currentScript.ownerDocument;
+    var PhonemeView = document.registerElement('phoneme-view', {
+        prototype: Object.create(HTMLElement.prototype, {
+            createdCallback: {
+                value: function() {
+                    var root = this.createShadowRoot();
+                    var template = currentDoc.querySelector('#phoneme');
+                    var clone = document.importNode(template.content, true);
+                    
+                    // TODO attributes handling
+                    var symbol = this.getAttribute("symbol");
+                    if(symbol != null && this.symbol != symbol)
+                    {
+                        this.symbol = symbol;
+                    }
+                    clone.querySelector('.phoneme_symbol').innerText = this.symbol;
+
+                    var example = this.getAttribute("example");
+                    if(example != null && this.example != example)
+                    {
+                        this.example = example;
+                    }
+                    this.example = this.example.replace('{', '<strong>');
+                    this.example = this.example.replace('}', '</strong>');
+                    
+                    clone.querySelector('.phoneme_example').innerHTML = this.example;
+
+                    root.appendChild(clone);
+                }
+            }
+        })
+    });
+</script>
