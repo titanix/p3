@@ -2,10 +2,6 @@
 function generate_phoneme_display(phoneme, language, additional_class)
 {
     var example = phoneme[language];
-    if(language == 'all')
-    {
-        example = '';
-    }
 
     return String.format(
         `<div class="phoneme_grid {2}">
@@ -47,15 +43,8 @@ function display_phonemes_with_selected_language(lang)
     var selected_phonemes = vowels;
     document.getElementById('vowel_panel').innerHTML = "";
 
-    if(lang != 'all')
-    {
-        selected_phonemes =  filter_phoneme_array_for_lang(vowels, lang);
-        display_phonemes(selected_phonemes, lang);
-    }
-    else
-    {
-        display_phonemes(selected_phonemes, 'all');
-    }
+    selected_phonemes =  filter_phoneme_array_for_lang(vowels, lang);
+    display_phonemes(selected_phonemes, lang);
 }
 
 function display_phonemes(phoneme_array, lang)
