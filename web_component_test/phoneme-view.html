@@ -86,15 +86,26 @@
                     }
                     clone.querySelector('.phoneme_symbol').innerText = this.symbol;
 
-                    var example = this.getAttribute("example");
-                    if(example != null && this.example != example)
+                    var exampleAttr = this.getAttribute("example");
+                    if(exampleAttr != null && this.exampleAttr != exampleAttr)
                     {
-                        this.example = example;
+                        this.exampleAttr = exampleAttr;
                     }
-                    this.example = this.example.replace('{', '<strong>');
-                    this.example = this.example.replace('}', '</strong>');
+                    this.exampleAttr = this.exampleAttr.replace('{', '<strong>');
+                    this.exampleAttr = this.exampleAttr.replace('}', '</strong>');
+                    clone.querySelector('.phoneme_example').innerHTML = this.exampleAttr;
+
+                    var soundAttr = this.getAttribute("sound");
+                    console.log(soundAttr);
                     
-                    clone.querySelector('.phoneme_example').innerHTML = this.example;
+                    clone.querySelector('.speaker').onmouseover = 
+                        function() 
+                        {
+                            console.log(soundAttr);
+                            var audio = new Audio(soundAttr);
+                            audio.crossOrigin = 'anonymous';
+                            audio.play();
+                        };
 
                     root.appendChild(clone);
                 }
