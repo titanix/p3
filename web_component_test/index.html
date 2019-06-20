@@ -19,7 +19,6 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
     <script>
-    
     // public static String format(string[] format)
     if (!String.format) {
         String.format = function(format) {
@@ -30,22 +29,28 @@
         };
     }
 
-window.onload = function init()
-{
-    display_phonemes_with_selected_language('all', vowels, 'vowel_panel');
-    display_phonemes_with_selected_language('all', consonants, 'consonant_panel');
-}
-
+    window.onload = function init()
+    {
+        display_phonemes_with_selected_language('all', vowels, 'vowel_panel');
+        display_phonemes_with_selected_language('all', consonants, 'consonant_panel');
+    }
     </script>
+
+    <style type="text/css">
+        .small_caps
+        {
+            font-size: 0.8em;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Phantastic Phonetic Portal</h1>
+    <h1>P<span class="small_caps">hantastic</span> P<span class="small_caps">honetic</span> P<span class="small_caps">ortal</span></h1>
     <div style="margin-bottom:40px;">
-        <h2>Start from a natural language</h2>
+        <h2>Select a natural language</h2>
         <select id="preset_language"
             onchange="selection_changed_handler()">
-            <option value="all">All</option>
+            <option value="all">None</option>
             <option value="english">English (USA)</option>
             <option value="french">French (France)</option>
             <option value="czech">Czech</option>
