@@ -39,7 +39,8 @@ $('select').each(function(){
         $this.val($(this).attr('rel'));
         $list.hide();
         //console.log($this.val());
-        display_phonemes_with_selected_language($this.val()); // HARDCODED
+        display_phonemes_with_selected_language($this.val(), vowels, 'vowel_panel'); // HARDCODED
+        display_phonemes_with_selected_language($this.val(), consonants, 'consonant_panel');
     });
   
     $(document).click(function() {

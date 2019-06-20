@@ -52,21 +52,22 @@ function selection_changed_handler()
 {
     var select = document.getElementById('preset_language');
 
-    display_phonemes_with_selected_language(select.value);
+    display_phonemes_with_selected_language(select.value, vowels, 'vowel_panel');
+    display_phonemes_with_selected_language(select.value, consonants, 'consonant_panel');
 }
 
-function display_phonemes_with_selected_language(lang)
+function display_phonemes_with_selected_language(lang, soundClass, targetDiv)
 {
-    var selected_phonemes = vowels;
-    document.getElementById('vowel_panel').innerHTML = "";
+    var selected_phonemes = soundClass;
+    document.getElementById(targetDiv).innerHTML = "";
 
-    selected_phonemes =  filter_phoneme_array_for_lang(vowels, lang);
-    display_phonemes(selected_phonemes, lang);
+    selected_phonemes =  filter_phoneme_array_for_lang(soundClass, lang);
+    display_phonemes(selected_phonemes, lang, targetDiv);
 }
 
-function display_phonemes(phoneme_array, lang)
+function display_phonemes(phoneme_array, lang, targetDiv)
 {
-    var panel = document.getElementById('vowel_panel');
+    var panel = document.getElementById(targetDiv);
     var i = 0;
 
     for(let p of phoneme_array)

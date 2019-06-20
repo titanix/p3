@@ -12,7 +12,8 @@
     <link rel="stylesheet" type="text/css" href="style/phonemes.css">
     <link rel="stylesheet" type="text/css" href="style/select-bar.css">
     
-    <script src="scripts/phonemes_data.js"></script>
+    <script src="scripts/vowels_data.js"></script>
+    <script src="scripts/consonants_data.js"></script>
     <script src="scripts/phonemes_code.js"></script>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -31,7 +32,8 @@
 
 window.onload = function init()
 {
-    display_phonemes_with_selected_language('all');
+    display_phonemes_with_selected_language('all', vowels, 'vowel_panel');
+    display_phonemes_with_selected_language('all', consonants, 'consonant_panel');
 }
 
     </script>
@@ -53,9 +55,11 @@ window.onload = function init()
     <h2>Simple Vowels</h2>
     <p>Une voyelle est un son du langage dont la production est caractérisée par le libre passage de l'air
         dans la cavité buccale ou les fosses nasales. <a href="#">More...<a></p>
-    <div id="vowel_panel" class="phoneme_group_grid">
-    </div>
+    <div id="vowel_panel" class="phoneme_group_grid"></div>
     <h2>Diphthong</h2>
+    <div id="diphtong_panel" class="phoneme_group_grid"></div>
+    <h2>Consonants</h2>
+    <div id="consonant_panel" class="phoneme_group_grid"></div>
 </body>
 
 
