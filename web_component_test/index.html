@@ -11,6 +11,8 @@
             -->
     <link rel="stylesheet" type="text/css" href="style/phonemes.css">
     <link rel="stylesheet" type="text/css" href="style/select-bar.css">
+
+    <script src="scripts/phoneme_view.js"></script>
     
     <script src="scripts/vowels_data.js"></script>
     <script src="scripts/consonants_data.js"></script>
@@ -45,6 +47,76 @@
 </head>
 
 <body>
+    <template id="phoneme">
+        <style>
+            .phoneme_grid {
+                display: grid;
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                background-color: #E0E0E0;
+                /* rgb(86, 183, 89);*/
+                height: 120px;
+                width: 120px;
+                grid-auto-columns: 40px;
+                grid-auto-rows: 40px;
+            }
+    
+            .phoneme_grid:hover {
+                background-color: #BABABA;
+            }
+    
+            .phoneme_grid > div {
+                /*border : 1px solid white;*/
+            }
+    
+            .phoneme_sound {
+                grid-row: 1;
+                grid-column: 3;
+                justify-self: center;
+                align-self: center;
+            }
+    
+            .phoneme_symbol {
+                grid-row: 2;
+                grid-column: 2;
+                justify-self: center;
+                align-self: center;
+    
+                font-family: Lato, Arial;
+                font-size: 3em;
+            }
+    
+            .phoneme_example {
+                grid-row: 3;
+                grid-column: 2;
+                justify-self: center;
+                align-self: center;
+    
+                font-weight: 200;
+                font-family: DejaVuSansLight;
+                opacity: 0.7;
+            }
+    
+            .phoneme_example > strong
+            {
+                font-family: DejaVuSans;
+            }
+    
+            .speaker {
+                width: 16px;
+                height: 16px;
+            }
+        </style>
+    
+        <div class="phoneme_grid">
+            <div class="phoneme_sound">
+                <img class="speaker" src="speaker.svg">
+            </div>
+            <div class="phoneme_symbol">{0}</div>
+            <div class="phoneme_example">{1}</div>
+        </div>
+    </template>
+
     <h1>P<span class="small_caps">hantastic</span> P<span class="small_caps">honetic</span> P<span class="small_caps">ortal</span></h1>
     <div style="margin-bottom:40px;">
         <h2>Select a natural language</h2>
