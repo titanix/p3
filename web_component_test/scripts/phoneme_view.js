@@ -29,12 +29,10 @@ class PhonemeView extends HTMLElement {
         clone.querySelector('.phoneme_example').innerHTML = this.exampleAttr;
 
         var soundAttr = this.getAttribute("sound");
-        //console.log(soundAttr);
         
-        clone.querySelector('.speaker').onmouseover = 
+        clone.querySelector('.phoneme_grid').onclick = 
             function() 
             {
-                console.log(soundAttr);
                 var audio = new Audio(soundAttr);
                 audio.crossOrigin = 'anonymous';
                 audio.play();
