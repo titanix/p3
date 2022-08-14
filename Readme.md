@@ -1,4 +1,4 @@
-#  Phantastic Phonology Portal
+#  Phantastic Phonetic Portal
 
 > Phantastic must be written with an F!!
 
@@ -28,7 +28,7 @@ Go in project folder and start the server.
 
 - [ ] Add missing sounds for included phonemes
 - [ ] Add missing phonemes for each included language
-- [ ] Hide the "diaphtongs" header if section if empty
+- [ ] Hide the "diaphtongs" header in section if empty
 - [X] Fix the display of example word when Chinese character is included 
 
 ## Licenses
