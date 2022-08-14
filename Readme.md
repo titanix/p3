@@ -14,12 +14,22 @@ Instead, this repository now hosts what was the prototype of phoneme selection p
 
 The project is written in pure HTML and Javascript. NPM and more generally front-end tooling are to stay excluded from the project, with the possible exception of TypeScript.
 
+### Run the project
+
+Install a [developement web server](https://www.npmjs.com/package/http-server) if you don't have it yet.
+
+`npm install --global http-server`
+
+Go in project folder and start the server.
+
+`cd phoneme_ui && http-server`
+
 ## Todo
 
 - [ ] Add missing sounds for included phonemes
 - [ ] Add missing phonemes for each included language
 - [ ] Hide the "diaphtongs" header if section if empty
-- [ ] Fix the display of example word when Chinese character is included 
+- [X] Fix the display of example word when Chinese character is included 
 
 ## Licenses
 
